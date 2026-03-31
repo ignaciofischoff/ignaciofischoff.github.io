@@ -1,38 +1,48 @@
-<!DOCTYPE html>
-<html lang="en" class="h-100">
+<<!DOCTYPE html>
+<html lang="es" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cover Template · Bootstrap</title>
+    <title>Mi Portfolio</title>
     
-    <!-- SOLO EL CSS DE BOOTSTRAP (desde CDN) -->
-    <link href="#" rel="#">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
-        /* Estilos específicos de Cover (copiados del original) */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                             url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
         .cover-container {
             max-width: 42em;
         }
-        .nav-masthead .nav-link {
-            color: rgba(255, 255, 255, .5);
-            border-bottom: .25rem solid transparent;
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        .nav-masthead .nav-link:hover,
-        .nav-masthead .nav-link:focus {
-            border-bottom-color: rgba(255, 255, 255, .25);
-        }
-        .nav-masthead .nav-link + .nav-link {
-            margin-left: 1rem;
-        }
-        .nav-masthead .active {
+
+        /* Estilo para los links de contacto sencillos */
+        .link-sencillo {
             color: #fff;
-            border-bottom-color: #fff;
+            text-decoration: underline;
+            font-size: 1.2rem;
+            margin: 10px 0;
+            display: block;
         }
-        /* Opcional: fondo personalizado */
-        body {
-            background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('https://images.unsplash.com/photo-1497290756760-23ac55edf36f?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
+
+        .link-sencillo:hover {
+            color: #00d4ff;
         }
     </style>
 </head>
@@ -42,29 +52,44 @@
         
         <header class="mb-auto">
             <div>
-                <h3 class="float-md-start mb-0">Mi titulo</h3> <!-- Cambiado -->
+                <h3 class="float-md-start mb-0">Mi Portfolio</h3>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0 active" href="index.html">Inicio</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">acceso</a> <!-- Enlace a blog -->
-                    <a class="nav-link fw-bold py-1 px-0" href="#">Contacto</a>
+                    <a class="nav-link fw-bold py-1 px-0 text-white" href="#inicio">Inicio</a>
+                    <a class="nav-link fw-bold py-1 px-0 ms-4 text-white-50" href="#contacto">Contacto</a>
                 </nav>
             </div>
         </header>
 
-        <main class="px-3">
-            <h1>Bienvenido a mi Portfolio</h1>
-            <p class="lead">Este es un template Cover personalizado para mostrar mis proyectos. Hecho con Bootstrap 5.</p>
-            <p class="lead">
-                <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Ir a Portfolio</a>
-            </p>
+        <main id="inicio">
+            <section>
+                <h1 class="display-4 fw-bold">Hola, soy Ignacio</h1>
+                <p class="lead">Hola, soy Ignacio Fischoff llevo 5 años programando en una empresa multinacional el dueño es Bruno Longo y me destaco como un programador destacado, único en resumidas palabras un distinguido. Esas fueron sus palabras </p>
+                <p class="lead mt-4">
+                    <a href="#contacto" class="btn btn-lg btn-light fw-bold border-white bg-white">Ir a mis redes</a>
+                </p>
+            </section>
         </main>
 
-        <footer class="mt-auto text-white-50">
-            <p>Template <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://x.com/mdo" class="text-white">@mdo</a>.</p>
+        <section id="contacto">
+            <h2 class="mb-4">Mis Contactos</h2>
+            
+            <p class="mb-1 text-white-50">Escríbeme a mi Gmail:</p>
+            <p class="fw-bold fs-4">tu-correo@gmail.com</p>
+
+            <div class="mt-4">
+                <a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" class="link-sencillo">
+                    Ir a mi LinkedIn
+                </a>
+                <a href="https://www.instagram.com/TU-USUARIO" target="_blank" class="link-sencillo">
+                    Ir a mi Instagram
+                </a>
+            </div>
+        </section>
+
+        <footer class="mt-auto text-white-50 py-3">
         </footer>
     </div>
 
-    <!-- JS DE BOOTSTRAP (para menús interactivos) -->
-    <script src="#"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
