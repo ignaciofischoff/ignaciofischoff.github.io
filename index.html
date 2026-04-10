@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" class="h-100">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +32,17 @@
             align-items: center;
         }
 
-        /* Estilo para los links de contacto sencillos */
+        /* Estilo para el Avatar */
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
         .link-sencillo {
             color: #fff;
             text-decoration: underline;
@@ -56,25 +66,34 @@
                 <nav class="nav nav-masthead justify-content-center float-md-end">
                     <a class="nav-link fw-bold py-1 px-0 text-white" href="#inicio">Inicio</a>
                     <a class="nav-link fw-bold py-1 px-0 ms-4 text-white-50" href="#contacto">Contacto</a>
+                    <a class="nav-link fw-bold py-1 px-0 ms-4 text-white-50" href="#proyecto">Proyecto</a>
                 </nav>
             </div>
         </header>
 
         <main id="inicio">
             <section>
+                <img src="a-boy-happy-mode-emoji-style-happy-kids-avatars-cute-children-smiling-boy-girl-in-rounds-set-illustration-girl-and-boy-avatar-happy-kids-child-happiness-boy-happy-face-illustration-art-vector-removebg.pg" alt="Avatar Ignacio" class="avatar">
+                
                 <h1 class="display-4 fw-bold">Hola, soy Ignacio</h1>
-                <p class="lead">Hola, soy Ignacio Fischoff llevo 5 años programando en una empresa multinacional el dueño es Bruno Longo y me destaco como un programador destacado, único en resumidas palabras un distinguido. Esas fueron sus palabras </p>
+                <p class="lead">Hola, soy Ignacio Fischoff llevo 5 años programando en una empresa multinacional el dueño es Bruno Longo y me resalto como un programador destacado, único en resumidas palabras, un distinguido. Manejo todo tipo de lenguajes y mi conocimiento es muy amplio.</p>
                 <p class="lead mt-4">
                     <a href="#contacto" class="btn btn-lg btn-light fw-bold border-white bg-white">Ir a mis redes</a>
                 </p>
             </section>
         </main>
 
+        <section id="proyecto">
+            <h2 class="mb-4">Proyecto</h2>
+            <p class="mb-1 text-white-50">Charla ted</p>
+            <p class="mb-1 text-white-50">Portfolio web</p>
+        </section>
+
         <section id="contacto">
             <h2 class="mb-4">Mis Contactos</h2>
             
             <p class="mb-1 text-white-50">Escríbeme a mi Gmail:</p>
-            <p class="fw-bold fs-4">tu-correo@gmail.com</p>
+            <p class="fw-bold fs-4">fischoffignacio@gmail.com</p>
 
             <div class="mt-4">
                 <a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" class="link-sencillo">
@@ -82,6 +101,9 @@
                 </a>
                 <a href="https://www.instagram.com/TU-USUARIO" target="_blank" class="link-sencillo">
                     Ir a mi Instagram
+                </a>
+                 <a href="https://www.github.com" target="_blank" class="link-sencillo">
+                    Ir a mi Github
                 </a>
             </div>
         </section>
