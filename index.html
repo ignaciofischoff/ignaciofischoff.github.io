@@ -1,110 +1,111 @@
 <!DOCTYPE html>
 <html lang="es" class="h-100">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
-        body {
-            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                             url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                             url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
 
-        .cover-container {
-            max-width: 42em;
-        }
+        .cover-container {
+            max-width: 42em;
+        }
 
-        section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-        /* Estilo para el Avatar */
-        .avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid white;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
+        /* Estilo para el Avatar */
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* 'object-fit: cover' asegura que la silueta se recorte y escale correctamente */
+            object-fit: cover;
+            border: 3px solid white;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
 
-        .link-sencillo {
-            color: #fff;
-            text-decoration: underline;
-            font-size: 1.2rem;
-            margin: 10px 0;
-            display: block;
-        }
+        .link-sencillo {
+            color: #fff;
+            text-decoration: underline;
+            font-size: 1.2rem;
+            margin: 10px 0;
+            display: block;
+        }
 
-        .link-sencillo:hover {
-            color: #00d4ff;
-        }
-    </style>
+        .link-sencillo:hover {
+            color: #00d4ff;
+        }
+    </style>
 </head>
 <body class="d-flex h-100 text-center text-bg-dark">
-    
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        
-        <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0">Mi Portfolio</h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0 text-white" href="#inicio">Inicio</a>
-                    <a class="nav-link fw-bold py-1 px-0 ms-4 text-white-50" href="#contacto">Contacto</a>
-                    <a class="nav-link fw-bold py-1 px-0 ms-4 text-white-50" href="#proyecto">Proyecto</a>
-                </nav>
-            </div>
-        </header>
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">Mi Portfolio</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link fw-bold py-1 px-0 text-white" href="#inicio">Inicio</a>
+                    <a class="nav-link fw-bold py-1 px-0 ms-4 text-white-50" href="#contacto">Contacto</a>
+                    <a class="nav-link fw-bold py-1 px-0 ms-4 text-white-50" href="#proyecto">Proyecto</a>
+                </nav>
+            </div>
+        </header>
 
-        <main id="inicio">
-            <section>
-                <img src="a-boy-happy-mode-emoji-style-happy-kids-avatars-cute-children-smiling-boy-girl-in-rounds-set-illustration-girl-and-boy-avatar-happy-kids-child-happiness-boy-happy-face-illustration-art-vector-removebg.pg" alt="Avatar Ignacio" class="avatar">
-                
-                <h1 class="display-4 fw-bold">Hola, soy Ignacio</h1>
-                <p class="lead">Hola, soy Ignacio Fischoff llevo 5 años programando en una empresa multinacional el dueño es Bruno Longo y me resalto como un programador destacado, único en resumidas palabras, un distinguido. Manejo todo tipo de lenguajes y mi conocimiento es muy amplio.</p>
-                <p class="lead mt-4">
-                    <a href="product.html" class="btn btn-lg btn-light fw-bold border-white bg-white">Ir a mi portfolio</a>
-                </p>
-            </section>
-        </main>
-        <section id="contacto">
-            <h2 class="mb-4">Mis Contactos</h2>
-            
-            <p class="mb-1 text-white-50">Escríbeme a mi Gmail:</p>
-            <p class="fw-bold fs-4">fischoffignacio@gmail.com</p>
+        <main id="inicio">
+            <section>
+                                <img src="business_silhouette_placeholder.png" alt="Avatar Ignacio" class="avatar">
+                
+                <h1 class="display-4 fw-bold">Hola, soy Ignacio</h1>
+                <p class="lead">Hola, soy Ignacio Fischoff llevo 5 años programando en una empresa multinacional el dueño es Bruno Longo y me resalto como un programador destacado, único en resumidas palabras, un distinguido. Manejo todo tipo de lenguajes y mi conocimiento es muy amplio.</p>
+                <p class="lead mt-4">
+                    <a href="product.html" class="btn btn-lg btn-light fw-bold border-white bg-white">Ir a mi portfolio</a>
+                </p>
+            </section>
+        </main>
+        <section id="contacto">
+            <h2 class="mb-4">Mis Contactos</h2>
+            
+            <p class="mb-1 text-white-50">Escríbeme a mi Gmail:</p>
+            <p class="fw-bold fs-4">fischoffignacio@gmail.com</p>
 
-            <div class="mt-4">
-                <a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" class="link-sencillo">
-                    Ir a mi LinkedIn
-                </a>
-                <a href="https://www.instagram.com/TU-USUARIO" target="_blank" class="link-sencillo">
-                    Ir a mi Instagram
-                </a>
-                 <a href="https://www.github.com" target="_blank" class="link-sencillo">
-                    Ir a mi Github
-                </a>
-            </div>
-        </section>
+            <div class="mt-4">
+                <a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" class="link-sencillo">
+                    Ir a mi LinkedIn
+                </a>
+                <a href="https://www.instagram.com/TU-USUARIO" target="_blank" class="link-sencillo">
+                    Ir a mi Instagram
+                </a>
+                 <a href="https://www.github.com" target="_blank" class="link-sencillo">
+                    Ir a mi Github
+                </a>
+            </div>
+        </section>
 
-        <footer class="mt-auto text-white-50 py-3">
-        </footer>
-    </div>
+        <footer class="mt-auto text-white-50 py-3">
+        </footer>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
