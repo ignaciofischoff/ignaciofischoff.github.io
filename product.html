@@ -3,95 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info | Ignacio Fischoff</title>
+    <title>Ignacio - El Programador | Distinguido</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
-        /* ESTÉTICA IGUAL A LA TAPA */
+        /* ESTÉTICA REPLICADA DE LA TAPA - Minimalismo y Fondo */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
+            /* Mismo fondo y oscuridad que la tapa */
             background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
                              url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
-        .container-simple {
-            max-width: 600px;
-            padding-top: 100px;
+        /* Contenedor centralizado para la experiencia */
+        .portfolio-container {
+            max-width: 60em; /* Un poco más ancho para el CV */
         }
 
-        .seccion {
-            margin-bottom: 40px;
+        /* Estilo de los bloques de experiencia */
+        .cv-item {
+            margin-bottom: 50px;
             text-align: left;
         }
 
-        h2 {
-            font-size: 1.2rem;
+        /* Títulos de sección */
+        .cv-title {
+            color: rgba(255,255,255,0.6);
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #00d4ff;
-            margin-bottom: 15px;
-        }
-
-        p, li {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.8);
-            line-height: 1.6;
-        }
-
-        .btn-volver {
-            color: white;
-            text-decoration: underline;
             font-size: 0.9rem;
-            margin-bottom: 50px;
+            margin-bottom: 10px;
+        }
+
+        /* Texto de descripción de experiencia */
+        .cv-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+
+        /* Badges de Lenguajes (estilo Aperture) */
+        .skill-badge {
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 50px;
+            margin: 4px;
             display: inline-block;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        /* Botón de volver minimalista */
+        .link-volver {
+            color: white;
+            text-decoration: underline;
+            font-size: 1.1rem;
+            opacity: 0.7;
+            transition: 0.3s;
         }
 
-        li {
-            margin-bottom: 10px;
+        .link-volver:hover {
+            opacity: 1;
+            color: #fff;
         }
     </style>
 </head>
-<body class="d-flex h-100">
+<body class="d-flex h-100 text-center">
     
-    <div class="container-simple mx-auto p-4">
+    <div class="portfolio-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         
-        <a href="index.html" class="btn-volver">← volver</a>
+        <header class="mb-auto text-start p-4">
+            <a href="index.html" class="link-volver">← Volver</a>
+        </header>
 
-        <div class="seccion">
-            <h2>Trayectoria</h2>
-            <p>Llevo 5 años programando en una empresa multinacional. Mi jefe, Bruno Longo, me destaca como un programador único y distinguido.</p>
-        </div>
+        <main>
+            <section class="p-4 p-md-5">
+                <h1 class="display-3 fw-bold mb-5">Trayectoria Profesional</h1>
+                
+                <div class="cv-item">
+                    <h5 class="cv-title">Experiencia Destacada</h5>
+                    <p class="cv-text">
+                        Con **5 años** de trayectoria en una empresa multinacional, bajo la dirección de Bruno Longo, 
+                        he sido resaltado por la dirección como un programador destacado, único en resumidas palabras, un distinguido.
+                        He desarrollado soluciones de alto nivel y optimizadas, demostrando un conocimiento amplio y versatilidad.
+                    </p>
+                </div>
 
-        <div class="seccion">
-            <h2>Lenguajes</h2>
-            <p>Manejo todo tipo de lenguajes y tengo un conocimiento muy amplio en el área técnica.</p>
-        </div>
+                <div class="cv-item mt-5">
+                    <h5 class="cv-title">Dominio Técnico</h5>
+                    <p class="cv-text mb-4">
+                        Manejo todo tipo de lenguajes y mi conocimiento es muy amplio en el sector IT.
+                        No me ato a una sola tecnología, sino que domino la arquitectura completa.
+                    </p>
+                    <div class="d-flex flex-wrap">
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">C++</span>
+                        <span class="skill-badge">C#</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Arquitectura Cloud</span>
+                    </div>
+                </div>
 
-        <div class="seccion">
-            <h2>Proyectos</h2>
-            <ul>
-                <li>• Charla TED</li>
-                <li>• Portfolio web</li>
-                <li>• Sistemas para multinacional</li>
-            </ul>
-        </div>
+                <div class="cv-item mt-5">
+                    <h5 class="cv-title">Logros</h5>
+                    <p class="cv-text">
+                        - 🎤 **Speaker Charla TED:** Divulgación tecnológica.<br>
+                        - 💻 **Portfolio Web Distinguido:** Esta misma interfaz.<br>
+                        - ⚙️ **Sistemas de Alto Rendimiento:** Desarrollo de soluciones multinacionales optimizadas.
+                    </p>
+                </div>
+                
+                <div class="mt-5 pt-5 pb-5 text-center">
+                    <p class="fs-5 opacity-75">Contacto: <span class="text-white fw-bold">fischoffignacio@gmail.com</span></p>
+                </div>
+            </section>
+        </main>
 
-        <div class="seccion">
-            <h2>Contacto</h2>
-            <p>fischoffignacio@gmail.com</p>
-        </div>
-
+        <footer class="mt-auto text-white-50 py-3 text-center">
+            <p class="small">© 2026 Ignacio Fischoff | El Programador Distinguido</p>
+        </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
