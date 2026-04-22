@@ -1,85 +1,219 @@
 <!DOCTYPE html>
+
 <html lang="es" class="h-100">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ignacio | Trayectoria & Proyectos</title>
-    
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <style>
-        /* ESTÉTICA FIEL A LA TAPA - Minimalismo y Fondo */
-        html {
-            scroll-behavior: smooth;
-        }
 
-        body {
-            /* Mismo fondo y oscuridad que la tapa */
-            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
-                             url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            overflow: hidden; /* Mantiene la estética de pantalla única */
-        }
+    <meta charset="UTF-8">
 
-        .cover-container {
-            max-width: 42em; /* Mismo ancho que la tapa */
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Botón volver arriba a la derecha */
-        .nav-volver {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            z-index: 1000;
-        }
+    <title>Mi Portfolio</title>
 
-        .link-volver {
-            color: white;
-            text-decoration: underline;
-            font-size: 1.1rem;
-            opacity: 0.7;
-            transition: 0.3s;
-        }
+    
 
-        .link-volver:hover {
-            opacity: 1;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        .texto-flotante {
-            font-size: 1.25rem;
-            line-height: 1.8;
-            text-align: center;
-        }
+    
 
-    </style>
+    <style>
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+
+                             url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+        }
+
+
+
+        .cover-container {
+
+            max-width: 42em;
+
+        }
+
+
+
+        section {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+
+        /* Estilo para el Avatar */
+
+        .avatar {
+
+            width: 150px;
+
+            height: 150px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid white;
+
+            margin-bottom: 20px;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+
+        }
+
+
+
+        .link-sencillo {
+
+            color: #fff;
+
+            text-decoration: underline;
+
+            font-size: 1.2rem;
+
+            margin: 10px 0;
+
+            display: block;
+
+        }
+
+
+
+        .link-sencillo:hover {
+
+            color: #00d4ff;
+
+        }
+
+    </style>
+
 </head>
-<body class="d-flex h-100 text-center">
-    
-        <div class="nav-volver">
-        <a href="index.html" class="link-volver">Volver</a>
-    </div>
 
-    <div class="cover-container d-flex w-100 h-100 p-4 mx-auto flex-column justify-content-center">
-        
-        <main>
-            <p class="texto-flotante">
-                Llevo 5 años programando en una empresa multinacional. El dueño es Bruno Longo y me resalto como un programador destacado, único en resumidas palabras, un distinguido. Manejo todo tipo de lenguajes y mi conocimiento es muy amplio.<br><br>
+<body class="d-flex h-100 text-center text-bg-dark">
+
+    
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        
+
+        <header class="mb-auto">
+
+            <div>
+
+                <h3 class="float-md-start mb-0">Mi Portfolio</h3>
+
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+
+                    <a class="nav-link fw-bold py-1 px-0 text-white" href="#inicio">Inicio</a>
+
+                    <a class="nav-link fw-bold py-1 px-0 ms-4 text-white-50" href="#contacto">Contacto</a>
+
+                    <a class="nav-link fw-bold py-1 px-0 ms-4 text-white-50" href="#proyecto">Proyecto</a>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+
+
+        <main id="inicio">
+
+            <section>
+
+                <img src="a-boy-happy-mode-emoji-style-happy-kids-avatars-cute-children-smiling-boy-girl-in-rounds-set-illustration-girl-and-boy-avatar-happy-kids-child-happiness-boy-happy-face-illustration-art-vector-removebg.pg" alt="Avatar Ignacio" class="avatar">
+
                 
-                Mis proyectos principales son Charla TED / Portfolio Web / Sistemas Multinacionales.<br><br>
-                
-                Contáctame en <strong>fischoffignacio@gmail.com</strong>
-            </p>
-        </main>
 
-        <footer class="mt-5 opacity-25">
-            <p class="small">© 2026 Ignacio Fischoff</p>
-        </footer>
-    </div>
+                <h1 class="display-4 fw-bold">Hola, soy Ignacio</h1>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                <p class="lead">Hola, soy Ignacio Fischoff llevo 5 años programando en una empresa multinacional el dueño es Bruno Longo y me resalto como un programador destacado, único en resumidas palabras, un distinguido. Manejo todo tipo de lenguajes y mi conocimiento es muy amplio.</p>
+
+                <p class="lead mt-4">
+
+                    <a href="product.html" class="btn btn-lg btn-light fw-bold border-white bg-white">Ir a mi portfolio</a>
+
+                </p>
+
+            </section>
+
+        </main>
+
+        <section id="contacto">
+
+            <h2 class="mb-4">Mis Contactos</h2>
+
+            
+
+            <p class="mb-1 text-white-50">Escríbeme a mi Gmail:</p>
+
+            <p class="fw-bold fs-4">fischoffignacio@gmail.com</p>
+
+
+
+            <div class="mt-4">
+
+                <a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" class="link-sencillo">
+
+                    Ir a mi LinkedIn
+
+                </a>
+
+                <a href="https://www.instagram.com/TU-USUARIO" target="_blank" class="link-sencillo">
+
+                    Ir a mi Instagram
+
+                </a>
+
+                 <a href="https://www.github.com" target="_blank" class="link-sencillo">
+
+                    Ir a mi Github
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <footer class="mt-auto text-white-50 py-3">
+
+        </footer>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-</html>
+
+</html> 
