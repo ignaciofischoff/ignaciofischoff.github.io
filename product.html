@@ -1,209 +1,138 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Ignacio Fischoff</title>
+    <title>Curriculum | Ignacio Fischoff</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
+        /* ESTÉTICA IDÉNTICA A LA TAPA */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+            /* Mismo fondo y oscuridad que la tapa */
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
                              url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .cv-container {
-            max-width: 1000px;
-            margin: 50px auto;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            padding: 60px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        .cover-container {
+            max-width: 50em; /* Un poco más ancho para los datos del CV */
         }
 
-        .header-cv {
-            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            color: #00d4ff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            margin-bottom: 25px;
+        section {
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            padding: 40px 0;
         }
 
-        .section-title::after {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: rgba(0, 212, 255, 0.2);
-            margin-left: 20px;
+        /* Estilo de bloques de CV */
+        .cv-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: left;
+            backdrop-filter: blur(5px);
         }
 
-        /* Estilo para los ítems del CV */
-        .cv-item {
-            margin-bottom: 30px;
-            border-left: 2px solid rgba(255, 255, 255, 0.1);
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .cv-item::before {
-            content: "";
-            position: absolute;
-            left: -6px;
-            top: 0;
-            width: 10px;
-            height: 10px;
-            background: #00d4ff;
-            border-radius: 50%;
-        }
-
-        .job-title {
-            font-size: 1.4rem;
-            color: white;
-            font-weight: 600;
-        }
-
-        .company-name {
+        .highlight-blue {
             color: #00d4ff;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        .date {
-            font-size: 0.9rem;
-            color: #888;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        /* Skills badges */
-        .skill-tag {
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 8px;
-            display: inline-block;
-            margin: 4px;
-            font-size: 0.9rem;
-        }
-
-        .btn-print {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #00d4ff;
-            border: none;
-            color: black;
             font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 50px;
+        }
+
+        .link-volver {
+            color: rgba(255,255,255,0.5);
             text-decoration: none;
             transition: 0.3s;
         }
 
-        .btn-print:hover {
-            background: white;
-            transform: scale(1.05);
+        .link-volver:hover {
+            color: #fff;
         }
 
-        @media (max-width: 768px) {
-            .cv-container { margin: 20px; padding: 30px; }
+        .skill-badge {
+            border: 1px solid rgba(0, 212, 255, 0.5);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin: 3px;
+            display: inline-block;
         }
     </style>
 </head>
-<body>
+<body class="d-flex h-100 text-center text-bg-dark">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">Ignacio <span class="highlight-blue">F.</span></h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link fw-bold py-1 px-0 text-white link-volver" href="index.html">← Volver</a>
+                </nav>
+            </div>
+        </header>
 
-    <a href="index.html" class="btn-print">← Volver</a>
-
-    <div class="cv-container">
-        <div class="header-cv text-center text-md-start">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <h1 class="display-4 fw-bold text-white">Ignacio Fischoff</h1>
-                    <p class="lead text-info">Programador Senior & Distinguido</p>
-                    <div class="d-flex flex-wrap gap-3 opacity-75 justify-content-center justify-content-md-start">
-                        <span>📍 Rosario, Argentina</span>
-                        <span>📧 fischoffignacio@gmail.com</span>
+        <main>
+            <section>
+                <h2 class="display-5 fw-bold mb-4">Currículum <span class="highlight-blue">Vitae</span></h2>
+                
+                <div class="cv-card">
+                    <h5 class="text-uppercase small fw-bold mb-3 highlight-blue">Experiencia Laboral</h5>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="mb-0 fw-bold">Programador Senior Destacado</h6>
+                            <span class="small opacity-50">2019 - Presente</span>
+                        </div>
+                        <p class="mb-1 text-white-50">Empresa Multinacional (Dir. Bruno Longo)</p>
+                        <p class="small opacity-75">Reconocido como programador distinguido y único. Liderazgo en proyectos de alta complejidad y manejo integral de lenguajes.</p>
                     </div>
                 </div>
-                <div class="col-md-4 text-center text-md-end mt-4 mt-md-0">
-                    <p class="small text-uppercase opacity-50 mb-0">Especialista Full Stack</p>
-                    <p class="fw-bold">5 años de experiencia</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-7">
-                <h3 class="section-title">Experiencia Profesional</h3>
-                
-                <div class="cv-item">
-                    <span class="date">2019 - Presente</span>
-                    <div class="job-title">Programador Senior Destacado</div>
-                    <div class="company-name">Empresa Multinacional (Dir. Bruno Longo)</div>
-                    <p class="mt-2 text-white-50">Liderazgo en desarrollo de software de alta escala, manejando múltiples lenguajes y arquitecturas. Reconocido por la dirección como un programador único y distinguido.</p>
+                <div class="cv-card">
+                    <h5 class="text-uppercase small fw-bold mb-3 highlight-blue">Conocimientos Amplios</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">C#</span>
+                        <span class="skill-badge">C++</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Arquitectura Cloud</span>
+                    </div>
                 </div>
 
-                <h3 class="section-title">Educación / Logros</h3>
-                
-                <div class="cv-item">
-                    <span class="date">Evento Destacado</span>
-                    <div class="job-title">Speaker - Charla TED</div>
-                    <p class="mt-2 text-white-50">Exposición sobre innovación tecnológica y el futuro del desarrollo de software.</p>
+                <div class="cv-card">
+                    <h5 class="text-uppercase small fw-bold mb-3 highlight-blue">Logros y Proyectos</h5>
+                    <p class="mb-2 fw-bold">🎤 Charla TED</p>
+                    <p class="small opacity-75 mb-3">Speaker sobre innovación tecnológica y desarrollo escalable.</p>
+                    
+                    <p class="mb-2 fw-bold">🌐 Portfolio Web Distinguido</p>
+                    <p class="small opacity-75">Desarrollo de interfaces de alto rendimiento y diseño minimalista.</p>
                 </div>
 
-                <div class="cv-item">
-                    <span class="date">Proyecto Académico</span>
-                    <div class="job-title">Desarrollo de Ecosistemas Web</div>
-                    <p class="mt-2 text-white-50">Investigación y aplicación de nuevas tendencias en interfaces de usuario.</p>
+                <div class="mt-4">
+                    <p class="text-white-50">Contacto: <span class="text-white">fischoffignacio@gmail.com</span></p>
                 </div>
-            </div>
+            </section>
+        </main>
 
-            <div class="col-md-5">
-                <h3 class="section-title">Habilidades Técnicas</h3>
-                <div class="mb-5">
-                    <div class="skill-tag">JavaScript (ES6+)</div>
-                    <div class="skill-tag">Python</div>
-                    <div class="skill-tag">C#</div>
-                    <div class="skill-tag">Node.js</div>
-                    <div class="skill-tag">React</div>
-                    <div class="skill-tag">SQL Server</div>
-                    <div class="skill-tag">Arquitectura Cloud</div>
-                    <div class="skill-tag">API Rest</div>
-                    <div class="skill-tag">Git / GitHub</div>
-                </div>
-
-                <h3 class="section-title">Idiomas</h3>
-                <div class="mb-5">
-                    <p class="mb-1">Español <span class="text-info">— Nativo</span></p>
-                    <p class="mb-1">Inglés <span class="text-info">— Técnico / Avanzado</span></p>
-                </div>
-
-                <h3 class="section-title">Perfil Único</h3>
-                <p class="small text-white-50">
-                    Capacidad de resolución de problemas complejos, adaptación a cualquier entorno tecnológico y visión estratégica en el desarrollo de productos digitales.
-                </p>
-            </div>
-        </div>
-
-        <footer class="text-center mt-5 pt-4 opacity-25 border-top">
-            <p>&copy; 2026 Ignacio Fischoff - CV Generado para Portfolio</p>
+        <footer class="mt-auto text-white-50 py-3">
+            <p class="small">© 2026 Ignacio Fischoff | Portfolio Profesional</p>
         </footer>
     </div>
 
