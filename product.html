@@ -1,128 +1,160 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio Profesional</title>
+    <title>Portfolio | Ignacio Fischoff</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
-        /* Estilos personalizados para asegurar que se vea bien */
-        body {
-            background-color: #f8f9fa;
-        }
-        
-        .hero-section {
-            padding: 80px 0;
-            background: #ffffff;
-            border-bottom: 1px solid #dee2e6;
+        /* Mantenemos la estética de la primera página */
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
+                             url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        /* Contenedor principal estilo Aperture */
+        .portfolio-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Tarjetas de Proyectos */
         .project-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            height: 100%;
-            border: 1px solid #eee;
-            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #00d4ff;
+            transform: translateY(-5px);
         }
 
-        .img-placeholder {
-            background-color: #6c757d;
-            height: 200px;
-            border-radius: 10px;
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+        /* Badges de Lenguajes */
+        .tech-badge {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            border: 1px solid #00d4ff;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+            border-left: 4px solid #00d4ff;
+            padding-left: 20px;
+        }
+
+        .highlight {
+            color: #00d4ff;
             font-weight: bold;
         }
 
-        footer {
-            background: #212529;
+        /* Botón volver */
+        .btn-back {
             color: white;
-            padding: 50px 0;
-            margin-top: 50px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            opacity: 1;
+            color: #00d4ff;
         }
     </style>
 </head>
-<body>
+<body class="d-flex flex-column h-100">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">MI PORTFOLIO</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="#proyectos">Proyectos</a>
-                <a class="nav-link" href="#contacto">Contacto</a>
+    <div class="portfolio-container">
+        <header class="d-flex justify-content-between align-items-center mb-5">
+            <a href="index.html" class="btn-back">← Volver al inicio</a>
+            <h4 class="mb-0 fw-bold">IF <span class="highlight">.</span></h4>
+        </header>
+
+        <div class="section-header">
+            <h1 class="display-5 fw-bold">Experiencia & <span class="highlight">Capacidades</span></h1>
+            <p class="lead text-white-50">Trayectoria de 5 años bajo la dirección de Bruno Longo.</p>
+        </div>
+
+        <div class="mb-5">
+            <h5 class="mb-3 text-uppercase fw-bold opacity-75">Stack Tecnológico Dominado</h5>
+            <div class="d-flex flex-wrap">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">JavaScript (ES6+)</span>
+                <span class="tech-badge">C++</span>
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">SQL Server</span>
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Arquitectura de Sistemas</span>
             </div>
         </div>
-    </nav>
 
-    <header class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold text-dark">Hola, soy Desarrollador</h1>
-            <p class="lead text-muted">Bienvenido a mi espacio de trabajo y proyectos.</p>
-            <div class="mt-4">
-                <a href="#proyectos" class="btn btn-primary btn-lg px-4 me-2">Ver Trabajos</a>
-                <a href="mailto:correo@ejemplo.com" class="btn btn-outline-dark btn-lg px-4">Contacto</a>
-            </div>
-        </div>
-    </header>
-
-    <main class="container my-5" id="proyectos">
-        <h2 class="text-center mb-5 fw-bold">Mis Proyectos</h2>
-        
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card text-center">
-                    <h3>App Web 1</h3>
-                    <p class="text-muted">Desarrollado con HTML y CSS</p>
-                    <div class="img-placeholder text-uppercase">Captura del Proyecto</div>
-                    <button class="btn btn-sm btn-dark">Ver más</button>
+        <div class="row">
+            <div class="col-12">
+                <div class="project-card">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <h2 class="fw-bold">Charla TED</h2>
+                            <p class="text-white-50">Presentación sobre el impacto de la programación en empresas multinacionales y el futuro del desarrollo de software liderado por equipos de alto rendimiento.</p>
+                            <span class="tech-badge">Liderazgo</span>
+                            <span class="tech-badge">Public Speaking</span>
+                        </div>
+                        <div class="col-md-5">
+                            <div style="height: 150px; background: rgba(255,255,255,0.1); border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                                <span class="display-4">🎤</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card text-center bg-dark text-white">
-                    <h3>App Web 2</h3>
-                    <p class="text-light opacity-75">Sistema de Gestión</p>
-                    <div class="img-placeholder bg-primary">Imagen Proximamente</div>
-                    <button class="btn btn-sm btn-outline-light">Ver más</button>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card text-center border-primary">
-                    <h3>App Web 3</h3>
-                    <p class="text-muted">Tienda Online</p>
-                    <div class="img-placeholder bg-secondary">Demo en Vivo</div>
-                    <button class="btn btn-sm btn-primary">Ver más</button>
+            <div class="col-12">
+                <div class="project-card">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <h2 class="fw-bold">Portfolio Web</h2>
+                            <p class="text-white-50">Desarrollo de una interfaz de usuario minimalista y optimizada para la visualización de perfiles técnicos senior, utilizando Bootstrap 5 y animaciones fluidas.</p>
+                            <span class="tech-badge">UX/UI</span>
+                            <span class="tech-badge">Frontend</span>
+                        </div>
+                        <div class="col-md-5">
+                            <div style="height: 150px; background: rgba(255,255,255,0.1); border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                                <span class="display-4">💻</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
 
-    <footer id="contacto">
-        <div class="container text-center">
-            <h3>¿Tienes un proyecto en mente?</h3>
-            <p class="mb-4">Hablemos sobre cómo puedo ayudarte.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#" class="text-white">LinkedIn</a>
-                <a href="#" class="text-white">GitHub</a>
-                <a href="#" class="text-white">Twitter</a>
-            </div>
-            <hr class="my-4 opacity-25">
-            <p class="small text-secondary">&copy; 2026 Tu Nombre. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+        <footer class="text-center mt-5 py-4 border-top border-secondary">
+            <p class="text-white-50 small">Ignacio Fischoff | <span class="highlight">Programador Distinguido</span> | 2026</p>
+        </footer>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
